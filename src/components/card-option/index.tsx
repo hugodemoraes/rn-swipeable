@@ -11,7 +11,7 @@ type Props = TouchableOpacityProps & {
   backgroundColor: ColorValue;
 };
 
-export function Option({ icon, backgroundColor, ...rest }: Props) {
+export function CardOption({ icon, backgroundColor, ...rest }: Props) {
   return (
     <TouchableOpacity
       style={[styles.container, { backgroundColor }]}

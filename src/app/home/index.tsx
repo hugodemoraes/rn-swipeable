@@ -7,7 +7,7 @@ import Swipeable, {
 import { styles } from "./styles";
 import { contacts } from "../../utils/contacts";
 import { Card } from "../../components/card";
-import { Option } from "../../components/option";
+import { CardOption } from "../../components/card-option";
 
 export function Home() {
   const [localContacts, setLocalContacts] = useState(contacts);
@@ -64,13 +64,13 @@ export function Home() {
               }
               renderRightActions={() => (
                 <View style={styles.rightActions}>
-                  <Option icon="open-in-new" backgroundColor="#00B960" />
-                  <Option icon="close" backgroundColor="#3E68D7" />
+                  <CardOption icon="open-in-new" backgroundColor="#00B960" />
+                  <CardOption icon="close" backgroundColor="#3E68D7" />
                 </View>
               )}
               renderLeftActions={() => (
                 <View style={styles.leftActions}>
-                  <Option icon="delete" backgroundColor="#E83D55" />
+                  <CardOption icon="delete" backgroundColor="#E83D55" />
                 </View>
               )}
             >
