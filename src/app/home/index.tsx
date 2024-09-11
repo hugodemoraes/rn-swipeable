@@ -14,12 +14,6 @@ export function Home() {
 
   const swipeableRef = useRef<SwipeableMethods | null>(null);
 
-  function closeSwipeable(currentRef: SwipeableMethods | null) {
-    if (swipeableRef.current) swipeableRef.current.close();
-
-    swipeableRef.current = currentRef;
-  }
-
   function onSwipeableWillOpen(
     direction: "left" | "right",
     contactId: string,
@@ -45,7 +39,9 @@ export function Home() {
         },
       ]);
 
-    closeSwipeable(currentRef);
+    if (swipeableRef.current) swipeableRef.current.close();
+
+    swipeableRef.current = currentRef;
   }
 
   return (
